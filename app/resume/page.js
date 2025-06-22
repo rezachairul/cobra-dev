@@ -193,11 +193,11 @@ export default function Resume() {
                     <h3 className="text-2xl font-bold border-b pb-2">PUBLICATION</h3>
                     <ul className="mt-2 text-gray-300">
                         <li className="flex justify-between">
-                            <span>"WebGIS-Based Heavy Equipment Tracking"</span>
+                            <span>&quot;WebGIS-Based Heavy Equipment Tracking&quot;</span>
                             <span>ITERA Journal (2025)</span>
                         </li>
                         <li className="flex justify-between">
-                            <span>"Optimizing Agile LSD for Geospatial Data"</span>
+                            <span>&quot;Optimizing Agile LSD for Geospatial Data&quot;</span>
                             <span>National Conference (2024)</span>
                         </li>
                     </ul>
