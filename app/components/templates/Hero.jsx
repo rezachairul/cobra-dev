@@ -74,7 +74,7 @@ export default function Hero() {
     {
       title: "Resume",
       icon: <IconFileCv className={iconClass} />,
-      href: "/resume/page",
+      href: "/resume",
     },
   ];
 
