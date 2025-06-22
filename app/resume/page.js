@@ -71,7 +71,7 @@ export default function Resume() {
                         <a href="https://instagram.com/rezachairul6" className="flex items-center gap-2 text-pink-600 hover:text-pink-500">
                             <IconBrandInstagram size={24} /> <span>rezachairul6</span>
                         </a>
-                        <a href="#" className="flex items-center gap-2 text-purple-600 hover:text-purple-500">
+                        <a href="cobradev.vercel.app" className="flex items-center gap-2 text-purple-600 hover:text-purple-500">
                             <IconWorldWww size={24} /> <span>CobraDev</span>
                         </a>
                     </div>
