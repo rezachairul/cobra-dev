@@ -81,22 +81,22 @@ export default function Resume() {
                 <div className="mt-8">
                     <h3 className="text-2xl font-bold border-b pb-2">PROFILE</h3>
                     <p className="text-lg text-justify leading-relaxed text-gray-300">
-                        Hi there! 👋 I'm <span className="font-semibold text-white">Reza Chairul Manam</span>, I'm currently living in Lampung, Indonesia. 
-                        I'm an Informatics Engineering student at the Sumatra Institute of Technology who loves everything about WebGIS and web development. Currently, I'm working with 
-                        <span className="text-rose-400"><a href="https://laravel.com/"> Laravel</a></span>, <span className="text-blue-400"> <a href="https://react.dev/"> React</a></span>, <span className="text-green-400"><a href="https://www.postgresql.org/"> PostgreSQL</a></span>, 
+                        Hi there! 👋 I&apos;m <span className="font-semibold text-white">Reza Chairul Manam</span>, I&apos;m currently living in Lampung, Indonesia.
+                        I&apos;m an Informatics Engineering student at the Sumatra Institute of Technology who loves everything about WebGIS and web development. Currently, I&apos;m working with
+                        <span className="text-rose-400"><a href="https://laravel.com/"> Laravel</a></span>, <span className="text-blue-400"> <a href="https://react.dev/"> React</a></span>, <span className="text-green-400"><a href="https://www.postgresql.org/"> PostgreSQL</a></span>,
                         and <span className="text-sky-400"><a href="https://tailwindcss.com/"> Tailwind CSS</a></span> to build interactive and scalable applications.
                     </p>
                     <p className="mt-4 text-lg text-justify leading-relaxed text-gray-300">
-                        Right now, I'm focused on a WebGIS project, exploring how geospatial data can be visualized and managed efficiently. I enjoy 
+                        Right now, I&apos;m focused on a WebGIS project, exploring how geospatial data can be visualized and managed efficiently. I enjoy
                         problem-solving and bringing ideas to life through code.
                     </p>
                     <p className="mt-4 text-lg text-justify leading-relaxed text-gray-300">
-                        Beyond coding, I have a passion for <span className="font-semibold text-white">graphic design</span>, <span className="font-semibold text-white">photography</span>, 
-                        and <span className="font-semibold text-white">video editing</span>. Whether it's creating visuals, capturing moments, or editing content, 
+                        Beyond coding, I have a passion for <span className="font-semibold text-white">graphic design</span>, <span className="font-semibold text-white">photography</span>,
+                        and <span className="font-semibold text-white">video editing</span>. Whether it&apos;s creating visuals, capturing moments, or editing content,
                         I love expressing creativity in different ways.
                     </p>
                     <p className="mt-4 text-lg text-justify font-semibold text-indigo-300">
-                        Let’s connect and create something awesome together! 🚀
+                        Let&apos;s connect and create something awesome together! 🚀
                     </p>
                 </div>
 
@@ -105,9 +105,9 @@ export default function Resume() {
                     <h3 className="text-2xl font-bold border-b pb-2">EDUCATION</h3>
                     <div className="flex justify-between text-gray-300">
                         <div>
-                            <span className="font-semibold">Bachelor’s Degree – Informatics Engineering</span><br />
-                            Institut Teknologi Sumatera, Lampung<br />
-                            GPA: 3.00/4.00 scale
+                        <span className="font-semibold">Bachelor&apos;s Degree – Informatics Engineering</span><br />
+                        Institut Teknologi Sumatera, Lampung<br />
+                        GPA: 3.00/4.00 scale
                         </div>
                         <span className="font-semibold">2020 – 2026</span>
                     </div>
