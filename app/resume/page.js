@@ -1,5 +1,8 @@
 import React from "react";
 
+import Link from 'next/link';
+
+
 import { 
     IconArrowLeft,
     IconDownload,
@@ -21,10 +24,10 @@ export default function Resume() {
             {/* Header */}
             <div className="max-w-4xl mx-auto px-6">
                 <div className="flex justify-between items-center border-b pb-4">
-                    <a href="/" className="text-gray-200 flex items-center gap-2 hover:text-purple-500">
+                    <Link href="/" className="text-gray-200 flex items-center gap-2 hover:text-purple-500">
                         <IconArrowLeft size={20} />
                         Back Home
-                    </a>
+                    </Link>
                     <h2 className="text-3xl font-bold text-gray-100">My Resume</h2>
                     <a 
                         href="/assets/CV_RezaChairul.pdf" 
@@ -273,7 +276,9 @@ export default function Resume() {
                 {/* Copyright Section */}
                 <div className="mt-8 text-center text-gray-400">
                     <p className="flex justify-center items-center gap-1">
-                        <IconCopyright size={16} /> {new Date().getFullYear()} <span className="text-purple-900 font-semibold hover:text-purple-700"><a href="/">CobraDev</a></span> All Rights Reserved.
+                        <IconCopyright size={16} /> {new Date().getFullYear()} 
+                        <Link href="/" className="text-purple-900 font-semibold hover:text-purple-700">CobraDev</Link> 
+                        All Rights Reserved.
                     </p>
                 </div>
             </div>
