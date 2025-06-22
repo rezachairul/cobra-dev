@@ -42,24 +42,24 @@ export default function About() {
           {/* Paragraf di kanan */}
           <div className="text-lg leading-relaxed text-gray-300 text-justify md:text-justify">
             <p>
-              Hi there! 👋 I'm <span className="font-semibold text-white">Reza Chairul Manam</span>, I'm currently living in Lampung, Indonesia.
-              I'm an Informatics Engineering student at the Institut Teknologi Sumatera who loves everything about WebGIS and web development.
-              Currently, I'm working with
+              Hi there! 👋 I&apos;m <span className="font-semibold text-white">Reza Chairul Manam</span>, I&apos;m currently living in Lampung, Indonesia.
+              I&apos;m an Informatics Engineering student at the Institut Teknologi Sumatera who loves everything about WebGIS and web development.
+              Currently, I&apos;m working with
               <span className="text-rose-400"> <a href="https://laravel.com/">Laravel</a></span>,
               <span className="text-blue-400"> <a href="https://react.dev/">React</a></span>,
               <span className="text-green-400"> <a href="https://www.postgresql.org/">PostgreSQL</a></span>, and
               <span className="text-sky-400"> <a href="https://tailwindcss.com/">Tailwind CSS</a></span> to build interactive and scalable applications.
             </p>
             <p className="mt-4">
-              Right now, I'm focused on a WebGIS project, exploring how geospatial data can be visualized and managed efficiently. I enjoy problem-solving and bringing ideas to life through code.
+              Right now, I&apos;m focused on a WebGIS project, exploring how geospatial data can be visualized and managed efficiently. I enjoy problem-solving and bringing ideas to life through code.
             </p>
             <p className="mt-4">
               Beyond coding, I have a passion for <span className="font-semibold text-white">graphic design</span>,
               <span className="font-semibold text-white"> photography</span>, and
-              <span className="font-semibold text-white"> video editing</span>. Whether it's creating visuals, capturing moments, or editing content, I love expressing creativity in different ways.
+              <span className="font-semibold text-white"> video editing</span>. Whether it&apos;s creating visuals, capturing moments, or editing content, I love expressing creativity in different ways.
             </p>
             <p className="mt-4 font-semibold text-indigo-300">
-              Let’s connect and create something awesome together! 🚀
+              Let&apos;s connect and create something awesome together! 🚀
             </p>
           </div>
         </div>
