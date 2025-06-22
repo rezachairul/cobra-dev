@@ -10,7 +10,10 @@ import SplashCursor from './components/ui/SpalshCursor'
 export default function Home() {
   return (
     <>
+      {/* Splash Cursor */}
       <SplashCursor />
+
+      {/* Menu */}
       <Navbar />
       <HeroWrapper />
       <About />
