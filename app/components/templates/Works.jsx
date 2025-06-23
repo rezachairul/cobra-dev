@@ -406,8 +406,7 @@ export default function Works() {
                     </CardItem>
                   </div>
                 </CardBody>
-              </CardContainer>
-              
+              </CardContainer>              
             </div>
           </div>
         ),

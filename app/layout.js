@@ -28,7 +28,7 @@ export async function generateMetadata() {
     title: routeTitleMap[pathname] || "CobraDev",
     description: "CobraDev - Portfolio of a GIS and Web Developer",
     icons: {
-      icon: "/assets/img/logo-cobradev.svg",
+      icon: "/favicon.svg",
     },
   };
 }

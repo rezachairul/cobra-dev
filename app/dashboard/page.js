@@ -1,4 +1,10 @@
 // Dashbaord page for the application
+
+export const metadata = {
+  title: "Dashboard | CobraDev",
+  description: "My Dashboard Page - CobraDev",
+};
+
 export default function DashboardPage() {
   return (
     <main>

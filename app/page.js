@@ -7,6 +7,12 @@ import Skill from './components/templates/Skill'
 import Contact from './components/templates/Contact'
 import SplashCursor from './components/ui/SpalshCursor'
 
+
+export const metadata = {
+  title: "Home | CobraDev",
+  description: "My Home Page - CobraDev",
+};
+
 export default function Home() {
   return (
     <>

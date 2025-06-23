@@ -16,6 +16,11 @@ import {
     IconWorldWww,
 } from "@tabler/icons-react";
 
+export const metadata = {
+  title: "Resume | CobraDev",
+  description: "My Resume Page - CobraDev",
+};
+
 export default function Resume() {
 
     return (
@@ -41,41 +46,45 @@ export default function Resume() {
 
                 {/* Nama dan Kontak */}
                 <div className="text-center mt-5">
-                    <h1 className="text-4xl font-bold">REZA CHAIRUL MANAM</h1>
+                    <h1 className="text-2xl md:text-4xl font-bold">REZA CHAIRUL MANAM</h1>
+
                     {/* Alamat */}
-                    <div className="flex justify-center items-center gap-6 mt-2 text-base">
+                    <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 mt-2 text-sm md:text-base text-center md:text-left">
                         <a href="https://maps.app.goo.gl/1yq6J2GwWhRBXKWA8" className="flex items-center gap-2">
-                            <IconHome size={20} className="text-white" />
-                            <span>Jl. Padmosari I No. 240, RT 005/RW 002, Desa Haduyang, Kec. Natar, Kab. Lampung Selatan, Lampung</span>
+                        <IconHome size={20} className="text-white" />
+                        <span>Jl. Padmosari I No. 240, RT 005/RW 002, Desa Haduyang, Kec. Natar, Kab. Lampung Selatan, Lampung</span>
                         </a>
                     </div>
+
                     {/* Kontak */}
-                    <div className="flex justify-center items-center gap-6 mt-2 text-lg">
+                    <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 mt-2 text-base md:text-lg text-center md:text-left">
                         <a href="https://wa.me/6288269620552" className="flex items-center gap-2">
-                            <IconPhoneCall size={20} className="text-red-500" />
-                            <span>+62 882 6962 0552</span>
+                        <IconPhoneCall size={20} className="text-red-500" />
+                        <span>+62 882 6962 0552</span>
                         </a>
                         <a href="mailto:rezachairul6@gmail.com" className="flex items-center gap-2">
-                            <IconMail size={20} className="text-gray-400" />
-                            <span>rezachairul6@gmail.com</span>
+                        <IconMail size={20} className="text-gray-400" />
+                        <span>rezachairul6@gmail.com</span>
                         </a>
                     </div>
+
                     {/* Sosial Media */}
-                    <div className="flex justify-center gap-6 mt-4">
+                    <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-4">
                         <a href="https://www.linkedin.com/in/reza-chairul6" className="flex items-center gap-2 text-blue-600 hover:text-blue-500">
-                            <IconBrandLinkedin size={24} /> <span>reza-chairul6</span>
+                        <IconBrandLinkedin size={24} /> <span>reza-chairul6</span>
                         </a>
                         <a href="https://github.com/rezachairul" className="flex items-center gap-2 text-gray-200 hover:text-gray-500">
-                            <IconBrandGithub size={24} /> <span>rezachairul</span>
+                        <IconBrandGithub size={24} /> <span>rezachairul</span>
                         </a>
                         <a href="https://instagram.com/rezachairul6" className="flex items-center gap-2 text-pink-600 hover:text-pink-500">
-                            <IconBrandInstagram size={24} /> <span>rezachairul6</span>
+                        <IconBrandInstagram size={24} /> <span>rezachairul6</span>
                         </a>
-                        <a href="cobradev.vercel.app" className="flex items-center gap-2 text-purple-600 hover:text-purple-500">
-                            <IconWorldWww size={24} /> <span>CobraDev</span>
+                        <a href="https://cobradev.vercel.app" className="flex items-center gap-2 text-purple-600 hover:text-purple-500">
+                        <IconWorldWww size={24} /> <span>CobraDev</span>
                         </a>
                     </div>
                 </div>
+
 
                 {/* Profile Section */}
                 <div className="mt-8">
@@ -130,11 +139,80 @@ export default function Resume() {
                 {/* Projects Section */}
                 <div className="mt-8">
                     <h3 className="text-2xl font-bold border-b pb-2">PROJECTS</h3>
-                    <p className="font-semibold mt-2">Project Title</p>
-                    <p className="text-gray-700"><span className="font-semibold">mm yyyy - mm yyyy</span></p>
-                    <ul className="list-disc pl-5 mt-2 text-gray-700">
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Ut in euismod nulla. Integer auctor nisi a massa hendrerit, id porta orci efficitur.</li>
+
+                    {/* 2025 */}
+                    <div className="flex justify-between items-center mt-2">
+                        <p className="font-semibold">hellomuse.site</p>
+                        <p className="font-semibold">2025</p>
+                    </div>
+                    <ul className="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Developed a visual-driven website to showcase creative projects in a modern, engaging format.</li>
+                        <li>Implemented responsive design and interactive UI components for better user experience.</li>
+                    </ul>
+
+                    <div className="flex justify-between items-center mt-4">
+                        <p className="font-semibold">Star Warship</p>
+                        <p className="font-semibold">2025</p>
+                    </div>
+                    <ul className="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Built an arcade-style spaceship game focusing on shooting mechanics and dynamic enemy behavior.</li>
+                        <li>Designed multiple enemy types and levels to increase gameplay difficulty and player engagement.</li>
+                    </ul>
+
+                    <div className="flex justify-between items-center mt-4">
+                        <p className="font-semibold">Sistem Monitoring Inventori K4 - PLN UPDK</p>
+                        <p className="font-semibold">2025</p>
+                    </div>
+                    <ul className="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Developed an inventory monitoring system to track and manage equipment data for PLN UPDK.</li>
+                        <li>Implemented CRUD functionalities, user authentication, and real-time monitoring dashboards.</li>
+                    </ul>
+
+                    {/* 2024 */}
+                    <div className="flex justify-between items-center mt-4">
+                        <p className="font-semibold">Ruang Nada</p>
+                        <p className="font-semibold">2024</p>
+                    </div>
+                    <ul className="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Designed a mobile application to simplify booking and borrowing of musical equipment and studio rooms for a campus music organization.</li>
+                        <li>Focused on intuitive UI/UX for student users and admin workflows.</li>
+                    </ul>
+
+                    <div className="flex justify-between items-center mt-4">
+                        <p className="font-semibold">SDGS Center ITERA</p>
+                        <p className="font-semibold">2024</p>
+                    </div>
+                    <ul className="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Developed an informative website to support ITERA’s Sustainable Development Goals initiatives.</li>
+                        <li>Managed content structure and responsive layouts to reach a broader academic audience.</li>
+                    </ul>
+
+                    {/* Early 2023 */}
+                    <div className="flex justify-between items-center mt-4">
+                        <p className="font-semibold">Perpusda Lampung</p>
+                        <p className="font-semibold">Early 2023</p>
+                    </div>
+                    <ul className="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Created an online library catalog system with user registration and book management features.</li>
+                        <li>Enabled efficient search and borrowing processes for library visitors.</li>
+                    </ul>
+
+                    <div className="flex justify-between items-center mt-4">
+                        <p className="font-semibold">Sistem Informasi Desa</p>
+                        <p className="font-semibold">Early 2023</p>
+                    </div>
+                    <ul className="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Developed a village information system to manage population data and administrative services.</li>
+                        <li>Improved data transparency and service efficiency for village officials and residents.</li>
+                    </ul>
+
+                    <div className="flex justify-between items-center mt-4">
+                        <p className="font-semibold">Bandar Lampung Health Facilities Map</p>
+                        <p className="font-semibold">Early 2023</p>
+                    </div>
+                    <ul className="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Created a WebGIS-based mapping system to display the distribution of health facilities in Bandar Lampung.</li>
+                        <li>Enabled the public to easily find nearby hospitals, clinics, and health centers.</li>
                     </ul>
                 </div>
 
