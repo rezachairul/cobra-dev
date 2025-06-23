@@ -28,16 +28,18 @@ export default function Resume() {
             {/* <SplashCursor /> */}
             {/* Header */}
             <div className="max-w-4xl mx-auto px-6">
-                <div className="flex justify-between items-center border-b pb-4">
-                    <Link href="/" className="text-gray-200 flex items-center gap-2 hover:text-purple-500">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-center border-b pb-4 gap-4 md:gap-0 text-center md:text-left">
+                    <Link href="/" className="text-gray-200 flex items-center gap-2 hover:text-purple-500 justify-center md:justify-start">
                         <IconArrowLeft size={20} />
                         Back Home
                     </Link>
+
                     <h2 className="text-3xl font-bold text-gray-100">My Resume</h2>
+
                     <a 
                         href="/assets/CV_RezaChairul.pdf" 
                         download="Reza_Chairul_Manam_CV.pdf" 
-                        className="px-6 py-2 border-purple-700 text-purple-700 border-2 rounded-lg hover:border-purple-500 hover:bg-purple-500 hover:text-white flex items-center gap-2"
+                        className="px-6 py-2 border-purple-700 text-purple-700 border-2 rounded-lg hover:border-purple-500 hover:bg-purple-500 hover:text-white flex items-center gap-2 justify-center md:justify-end"
                     >
                         <IconDownload size={20} />
                         Download
@@ -51,7 +53,7 @@ export default function Resume() {
                     {/* Alamat */}
                     <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 mt-2 text-sm md:text-base text-center md:text-left">
                         <a href="https://maps.app.goo.gl/1yq6J2GwWhRBXKWA8" className="flex items-center gap-2">
-                        <IconHome size={20} className="text-white" />
+                        <IconHome size={20} className="text-white hidden md:inline" />
                         <span>Jl. Padmosari I No. 240, RT 005/RW 002, Desa Haduyang, Kec. Natar, Kab. Lampung Selatan, Lampung</span>
                         </a>
                     </div>
