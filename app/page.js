@@ -10,7 +10,7 @@ import SplashCursor from './components/ui/SpalshCursor'
 
 export const metadata = {
   title: "Home | CobraDev",
-  description: "My Home Page - CobraDev",
+  description: "CobraDev - Portfolio of a GIS and Web Developer",
 };
 
 export default function Home() {
