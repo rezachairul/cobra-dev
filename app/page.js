@@ -6,7 +6,7 @@ import Works from './components/templates/Works'
 import Skill from './components/templates/Skill'
 import Contact from './components/templates/Contact'
 import SplashCursor from './components/ui/SpalshCursor'
-
+import ScrollToTopButton from './components/ui/ScrollTopButton';
 
 export const metadata = {
   title: "Home | CobraDev",
@@ -26,6 +26,7 @@ export default function Home() {
       <Works />
       <Skill />
       <Contact />
+      <ScrollToTopButton />
     </>
   )
 }

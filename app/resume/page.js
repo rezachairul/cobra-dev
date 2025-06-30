@@ -1,8 +1,7 @@
 import React from "react";
 
 import Link from 'next/link';
-
-
+import ScrollToTopButton from '../components/ui/ScrollTopButton';
 import { 
     IconArrowLeft,
     IconDownload,
@@ -362,6 +361,7 @@ export default function Resume() {
                     </p>
                 </div>
             </div>
+            <ScrollToTopButton />
         </section>
     );
 }
