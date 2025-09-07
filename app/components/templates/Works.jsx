@@ -138,7 +138,7 @@ export default function Works() {
                     <CardItem
                       translateZ={20}
                       as="a"
-                      href="hhttps://simotork4.my.id/"
+                      href="https://simotork4.my.id/"
                       target="__blank"
                       className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
                       Try now →
