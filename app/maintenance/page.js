@@ -100,10 +100,7 @@ export default function MaintenancePage() {
 
         <div className="mt-10 grid grid-cols-4 gap-4">
           {Object.entries(timeLeft).map(([label, value]) => (
-            <div
-              key={label}
-              className="bg-white/5 border border-purple-500/20 backdrop-blur-lg rounded-xl py-4 shadow-[0_0_20px_rgba(168,85,247,0.3)]"
-            >
+            <div key={label} className="bg-white/5 border border-purple-500/20 backdrop-blur-lg rounded-xl py-4 shadow-[0_0_20px_rgba(168,85,247,0.3)]" >
               <div className="text-3xl font-bold text-purple-400">
                 {value}
               </div>
