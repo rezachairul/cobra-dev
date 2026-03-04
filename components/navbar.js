@@ -35,18 +35,26 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-1.5 md:py-2 flex justify-between items-center">
         
         {/* Logo */}
-        <h1 className="text-xl font-bold tracking-widest animate-pulse">
-            COBRA<span className="text-gray-400">DEV</span>
-        </h1>
+        <div className="flex items-center gap-2 tracking-widest animate-pulse">
+            <img
+                src="/assets/img/logo-cobradev.svg"
+                alt="CobraDev Logo"
+                className="w-8 h-8 object-contain"
+            />
+
+            <h1 className="text-lg md:text-xl font-bold tracking-widest">
+                COBRA<span className="text-gray-400">DEV</span>
+            </h1>
+        </div>
 
         {/* Menu */}
-        <ul className="hidden md:flex gap-4 text-gray-700 dark:text-gray-300 font-thin text-base">
-          <li><a href="#home" className="hover:text-blue-500">Home</a></li>
-          <li><a href="#about" className="hover:text-blue-500">About</a></li>
-          <li><a href="#project" className="hover:text-blue-500">Project</a></li>
-          <li><a href="#skill" className="hover:text-blue-500">Skill</a></li>
-          <li><a href="#journey" className="hover:text-blue-500">Journey</a></li>
-          <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
+        <ul className="hidden md:flex gap-4 text-gray-700 dark:text-gray-300 font-thin text-sm">
+          <li><a href="#home" className="hover:text-blue-500">HOME</a></li>
+          <li><a href="#about" className="hover:text-blue-500">ABOUT</a></li>
+          <li><a href="#project" className="hover:text-blue-500">PROJECT</a></li>
+          <li><a href="#skill" className="hover:text-blue-500">SKILL</a></li>
+          <li><a href="#journey" className="hover:text-blue-500">JOURNEY</a></li>
+          <li><a href="#contact" className="hover:text-blue-500">CONTACT</a></li>
         </ul>
 
         {/* Actions */}
