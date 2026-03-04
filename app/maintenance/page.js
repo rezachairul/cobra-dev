@@ -96,6 +96,9 @@ export default function MaintenancePage() {
         <p className="mt-6 text-lg text-gray-300 leading-relaxed">
           Rebuilding infrastructure. Optimizing performance.
           Deploying next-generation architecture.
+          Stay tuned for a faster, more reliable experience. We’re working hard to bring you an improved service. Thank you for your patience and support!
+          <br />
+          <span className="text-lg md:text-xl font-extrabold tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">CobraDev Team</span>
         </p>
 
         <div className="mt-10 grid grid-cols-4 gap-4">
