@@ -49,7 +49,7 @@ const Navbar = () => {
 
         {/* Menu */}
         <ul className="hidden md:flex gap-4 text-gray-700 dark:text-gray-300 font-thin text-sm">
-          <li><a href="#home" className="hover:text-blue-500">HOME</a></li>
+          <li><a href="#hero" className="hover:text-blue-500">HOME</a></li>
           <li><a href="#about" className="hover:text-blue-500">ABOUT</a></li>
           <li><a href="#project" className="hover:text-blue-500">PROJECT</a></li>
           <li><a href="#skill" className="hover:text-blue-500">SKILL</a></li>

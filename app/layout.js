@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// ✅ Metadata Global (lebih proper & SEO friendly)
+// Metadata Global (lebih proper & SEO friendly)
 export const metadata = {
   title: {
     default: "CobraDev",

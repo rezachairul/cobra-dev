@@ -17,7 +17,7 @@ export default function Project() {
   ];
 
   return (
-    <section id="projects" className="py-20 px-6 bg-green-700 border-green-500 border-2 mx-auto">
+    <section id="project" className="py-20 px-6 bg-green-700 border-green-500 border-2 mx-auto">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-10">Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
