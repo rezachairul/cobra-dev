@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/layout.js", "app/maintenance/page.js", "lib/utils.jsx"  ],
+, "app/layout.js", "app/maintenance/page.js", "lib/utils.jsx", "components/ui/comet-card.jsx"  ],
   "exclude": ["node_modules"]
 }
