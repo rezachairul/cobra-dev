@@ -17,9 +17,12 @@ export default function Project() {
   ];
 
   return (
-    <section id="project" className="py-20 px-6 bg-green-700 border-green-500 border-2 mx-auto">
+    <section id="project" className="py-20 px-6 mx-auto">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10">Projects</h2>
+        {/* Title */}
+        <h2 className="text-lg md:text-xl font-medium font-mono mb-8 tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">
+          Projects       
+        </h2>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <div key={index} className="border p-6 rounded-xl">

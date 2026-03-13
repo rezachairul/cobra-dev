@@ -11,10 +11,9 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}
-      <h2 className="text-lg md:text-xl font-medium font-mono mb-8 tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">
-        About Me
-        <span className="h-[2px] w-20 bg-purple-500"></span>
-      </h2>
+        <h2 className="text-lg md:text-xl font-medium font-mono mb-8 tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">
+          About Me
+        </h2>
 
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-[25%_75%] gap-10 items-start">

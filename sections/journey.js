@@ -6,9 +6,12 @@
 // Export
 export default function Journey() {
   return (
-    <section id="journey" className="py-20 px-6 bg-gradient-to-bl from-indigo-500 via-purple-500 to-pink-500 border-purple-500 border-2">
+    <section id="journey" className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">My Journey</h2>
+        {/* Title */}
+        <h2 className="text-lg md:text-xl font-medium font-mono mb-8 tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">
+          Journey
+        </h2>
         <ul className="space-y-4 text-gray-200">
           <li>🎓 Studied GIS & Spatial Analysis</li>
           <li>💻 Started learning Web Development</li>

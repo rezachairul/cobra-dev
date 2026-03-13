@@ -62,7 +62,7 @@ export default function Hero() {
             hover:shadow-[0_0_25px_rgba(168,85,247,0.8)]
           "
           >
-            <a href="#contact">View My Projects</a>
+            <a href="#project">View My Projects</a>
           </button>
 
           {/* Secondary Button */}
