@@ -32,7 +32,10 @@ export default function Contact() {
 
       {/* Main CTA Button */}
       <div className="flex justify-center mb-10">
-        <a href="mailto:emailkamu@email.com" className="flex items-center gap-2 px-6 py-3 rounded-xl backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all duration-300" >
+        <a
+          href="mailto:emailkamu@email.com"
+          className=" flex items-center gap-2  px-6 py-3  rounded-xl  font-mono border border-purple-500/20 text-purple-300 bg-purple-600/20 shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:shadow-[0_0_25px_rgba(168,85,247,0.8)] hover:scale-105 transition-all duration-300 "
+        >
           <IconMessageCircle size={20} />
           Hubungi Saya
         </a>
@@ -40,19 +43,34 @@ export default function Contact() {
 
       {/* Social Icons */}
       <div className="flex justify-center gap-6">
-        <a href="mailto:rezachairul6@gmail.com" className="p-3 rounded-xl backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition" >
+        <a
+          href="mailto:rezachairul6@gmail.com"
+          className=" p-3 rounded-xl border border-purple-500/20 text-gray-400 hover:text-purple-300 hover:bg-purple-600/20 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:scale-110 transition-all duration-300 "
+        >
           <IconMail size={20} />
         </a>
 
-        <a href="https://github.com/rezachairul" target="_blank" className="p-3 rounded-xl backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition" >
+        <a
+          href="https://github.com/rezachairul"
+          target="_blank"
+          className=" p-3 rounded-xl border border-purple-500/20 text-gray-400 hover:text-purple-300 hover:bg-purple-600/20 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:scale-110 transition-all duration-300 "
+        >
           <IconBrandGithub size={20} />
         </a>
 
-        <a href="https://www.linkedin.com/in/reza-chairul6/" target="_blank" className="p-3 rounded-xl backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition" >
+        <a
+          href="https://www.linkedin.com/in/reza-chairul6/"
+          target="_blank"
+          className=" p-3 rounded-xl border border-purple-500/20 text-gray-400 hover:text-purple-300 hover:bg-purple-600/20 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:scale-110 transition-all duration-300 "
+        >
           <IconBrandLinkedin size={20} />
         </a>
 
-        <a href="https://www.instagram.com/rezachairul6/" target="_blank" className="p-3 rounded-xl backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition" >
+        <a
+          href="https://www.instagram.com/rezachairul6/"
+          target="_blank"
+          className=" p-3 rounded-xl border border-purple-500/20 text-gray-400 hover:text-purple-300 hover:bg-purple-600/20 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:scale-110 transition-all duration-300 "
+        >
           <IconBrandInstagram size={20} />
         </a>
       </div>
