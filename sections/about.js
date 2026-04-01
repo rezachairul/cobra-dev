@@ -68,6 +68,45 @@ export default function About() {
 
               Dengan minat pada teknologi geospasial, visualisasi data, dan pengembangan sistem web modern, saya terus mengembangkan solusi yang menggabungkan teknologi dengan kebutuhan nyata organisasi dan masyarakat.
             </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+
+              {/* Card 1 */}
+              <div className="bg-[#0b0b18] border border-purple-500/20 rounded-lg p-4 shadow-[0_0_15px_rgba(168,85,247,0.15)]hover:shadow-[0_0_20px_rgba(168,85,247,0.35)]transition-all duration-300">
+
+                <p className="text-xs text-gray-400 font-mono tracking-widest">
+                  Focus
+                </p>
+                <p className="text-purple-300 font-semibold mt-1">
+                  GIS & Full-Stack
+                </p>
+
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-[#0b0b18] border border-purple-500/20 rounded-lg p-4 shadow-[0_0_15px_rgba(168,85,247,0.15)]hover:shadow-[0_0_20px_rgba(168,85,247,0.35)]transition-all duration-300">
+
+                <p className="text-xs text-gray-400 font-mono tracking-widest">
+                  Experience
+                </p>
+                <p className="text-purple-300 font-semibold mt-1">
+                  3+ Years
+                </p>
+
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-[#0b0b18] border border-purple-500/20 rounded-lg p-4 shadow-[0_0_15px_rgba(168,85,247,0.15)]hover:shadow-[0_0_20px_rgba(168,85,247,0.35)]transition-all duration-300">
+
+                <p className="text-xs text-gray-400 font-mono tracking-widest">
+                  Status
+                </p>
+                <p className="text-purple-300 font-semibold mt-1">
+                  Available
+                </p>
+
+              </div>
+
+            </div>
           </div>
 
         </div>
