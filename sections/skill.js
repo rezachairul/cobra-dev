@@ -140,18 +140,19 @@ export default function Skill() {
     </section>
   );
 }
-
-
 function SkillCard({ skill, Icon, startAnimation }) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    if (!startAnimation) return;
+    if (!startAnimation) {
+      setProgress(0);
+      return;
+    }
 
     let start = 0;
     const end = skill.level;
     const duration = 1200;
-    const stepTime = Math.abs(Math.floor(duration / end));
+    const stepTime = Math.max(10, Math.floor(duration / end));
 
     const timer = setInterval(() => {
       start += 1;
@@ -163,15 +164,12 @@ function SkillCard({ skill, Icon, startAnimation }) {
   }, [startAnimation, skill.level]);
 
   return (
-    <div
-      className="bg-[#0b0b18] border border-purple-500/20 
-      rounded-xl p-5 
-      shadow-[0_0_20px_rgba(168,85,247,0.15)]
-      hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]
-      transition-all duration-300"
-    >
+    <div className="bg-[#0b0b18] border border-purple-500/20 
+    rounded-xl p-5 
+    shadow-[0_0_20px_rgba(168,85,247,0.15)]
+    hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]
+    transition-all duration-300">
       
-      {/* header */}
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2 text-gray-300">
           <Icon size={18} className="text-purple-400" />
@@ -183,14 +181,13 @@ function SkillCard({ skill, Icon, startAnimation }) {
         </span>
       </div>
 
-      {/* progress */}
       <div className="w-full h-2 bg-purple-900/30 rounded-full overflow-hidden">
         <div
           className="h-full rounded-full bg-gradient-to-r 
           from-purple-500 via-fuchsia-500 to-purple-600
           shadow-[0_0_15px_rgba(168,85,247,0.8)]
-          transition-all duration-1000 ease-out"
-          style={{ width: startAnimation ? `${skill.level}%` : "0%" }}
+          transition-all duration-300 ease-out"
+          style={{ width: `${progress}%` }}
         />
       </div>
     </div>
