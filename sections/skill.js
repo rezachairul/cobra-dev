@@ -1,35 +1,198 @@
 // sections/skill.js
 
+"use client";
 // Import 
+import { useEffect, useRef, useState } from "react";
 
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaFigma,
+  FaPhp,
+  FaLaravel,
+  FaGitAlt,
+  FaDocker
+} from "react-icons/fa";
+
+import {
+  SiTailwindcss,
+  SiJavascript,
+  SiMysql,
+  SiPostgresql,
+  SiSqlite,
+  SiLatex
+} from "react-icons/si";
 
 // Export
 export default function Skill() {
-  const skills = [
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Laravel",
-    "PostgreSQL",
-    "GIS",
-    "Docker"
+  const sectionRef = useRef(null);
+  const [startAnimation, setStartAnimation] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStartAnimation(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+  }, []);
+
+  const skillGroups = [
+    {
+      title: "Frontend",
+      items: [
+        { name: "HTML5", level: 95, icon: FaHtml5 },
+        { name: "CSS3", level: 94, icon: FaCss3Alt },
+        { name: "React", level: 82, icon: FaReact },
+        { name: "JavaScript", level: 81, icon: SiJavascript },
+        { name: "Tailwind CSS", level: 84, icon: SiTailwindcss },
+        { name: "Bootstrap", level: 88, icon: FaBootstrap },
+        { name: "Figma", level: 85, icon: FaFigma },
+      ]
+    },
+    {
+      title: "Backend",
+      items: [
+        { name: "PHP", level: 90, icon: FaPhp },
+        { name: "Laravel", level: 92, icon: FaLaravel },
+      ]
+    },
+    {
+      title: "Database",
+      items: [
+        { name: "MySQL", level: 93, icon: SiMysql },
+        { name: "SQLite", level: 85, icon: SiSqlite },
+        { name: "PostgreSQL", level: 88, icon: SiPostgresql },
+      ]
+    },
+    {
+      title: "Tools & Workflow",
+      items: [        
+        { name: "Git", level: 89, icon: FaGitAlt },
+        { name: "Docker", level: 86, icon: FaDocker },
+        { name: "LaTeX", level: 86, icon: SiLatex },
+      ]
+    }
   ];
 
   return (
-    <section id="skill" className="py-20 px-6">
+    <section ref={sectionRef} id="skill" className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
+        
         {/* Title */}
         <h2 className="text-lg md:text-xl font-medium font-mono mb-8 tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">
-          Skills
+          Stack & Tools
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {skills.map((skill, index) => (
-            <div key={index} className="border p-4 rounded-lg text-center">
-              {skill}
-            </div>
+
+        {/* Tabs */}
+        <div className="flex flex-wrap gap-3 mb-10">
+          {skillGroups.map((group, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveTab(index)}
+              className={`
+                px-4 py-2 rounded-lg text-sm font-mono
+                border transition-all duration-300
+                ${
+                  activeTab === index
+                    ? "bg-purple-600/20 border-purple-400 text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+                    : "border-purple-500/20 text-gray-400 hover:text-purple-300"
+                }
+              `}
+            >
+              {group.title}
+            </button>
           ))}
         </div>
+
+        {/* Animated Content */}
+        <div className="relative overflow-hidden">
+          <div
+            key={activeTab}
+            className="animate-slide"
+          >
+            <div className="grid md:grid-cols-3 gap-5">
+              {skillGroups[activeTab].items.map((skill, index) => {
+                const Icon = skill.icon;
+                return (
+                  <SkillCard
+                    key={index}
+                    skill={skill}
+                    Icon={Icon}
+                    startAnimation={startAnimation}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
+  );
+}
+
+
+function SkillCard({ skill, Icon, startAnimation }) {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (!startAnimation) return;
+
+    let start = 0;
+    const end = skill.level;
+    const duration = 1200;
+    const stepTime = Math.abs(Math.floor(duration / end));
+
+    const timer = setInterval(() => {
+      start += 1;
+      setProgress(start);
+      if (start >= end) clearInterval(timer);
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [startAnimation, skill.level]);
+
+  return (
+    <div
+      className="bg-[#0b0b18] border border-purple-500/20 
+      rounded-xl p-5 
+      shadow-[0_0_20px_rgba(168,85,247,0.15)]
+      hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]
+      transition-all duration-300"
+    >
+      
+      {/* header */}
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-2 text-gray-300">
+          <Icon size={18} className="text-purple-400" />
+          {skill.name}
+        </div>
+
+        <span className="text-purple-400 text-sm">
+          {progress}%
+        </span>
+      </div>
+
+      {/* progress */}
+      <div className="w-full h-2 bg-purple-900/30 rounded-full overflow-hidden">
+        <div
+          className="h-full rounded-full bg-gradient-to-r 
+          from-purple-500 via-fuchsia-500 to-purple-600
+          shadow-[0_0_15px_rgba(168,85,247,0.8)]
+          transition-all duration-1000 ease-out"
+          style={{ width: startAnimation ? `${skill.level}%` : "0%" }}
+        />
+      </div>
+    </div>
   );
 }
