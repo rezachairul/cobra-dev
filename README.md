@@ -29,29 +29,4 @@ This is a modern, responsive, and animated personal portfolio website built usin
 
 ---
 
-## 📦 Struktur Folder
-'''
-📦cobradev
- ┣ 📂.git
- ┣ 📂.next
- ┣ 📂app
- ┃ ┣ 📂assets
- ┃ ┃ ┣ 📂css
- ┃ ┃ ┣ 📂img
- ┃ ┣ 📂home
- ┃ ┣ 📂maintenance
- ┣ 📂components
- ┃ ┣ 📂ui
- ┣ 📂lib
- ┣ 📂prisma
- ┃ ┣ 📂migrations
- ┃ ┗ 📜schema.prisma
- ┣ 📂public
- ┃ ┣ 📂assets
- ┃ ┃ ┣ 📂img
- ┃ ┃ ┃ ┣ 📂project
- ┣ 📂sections
- ┣ 📂styles
-'''
-
 ## 🚀 Getting Started
