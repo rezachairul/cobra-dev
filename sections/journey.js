@@ -4,6 +4,8 @@
 // Import 
 import { useEffect, useRef, useState } from "react";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 import { TbMapSearch } from "react-icons/tb";
 import { BsGlobeAsiaAustralia } from "react-icons/bs";
 import { BsRocketTakeoff } from "react-icons/bs";
@@ -14,6 +16,8 @@ import { FaComputer } from "react-icons/fa6";
 export default function Journey() {
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
+
+  const { language } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,33 +30,70 @@ export default function Journey() {
     if (sectionRef.current) observer.observe(sectionRef.current);
   }, []);
 
-  const journeys = [
-    {
-      title: "Started with GIS",
-      desc: "Studied Geographic Information Systems and spatial data analysis, building strong analytical foundations.",
-      icon: TbMapSearch
-    },
-    {
-      title: "Discovered Web Development",
-      desc: "Learned HTML, CSS, and JavaScript to create interactive spatial data visualizations.",
-      icon: FaComputer
-    },
-    {
-      title: "Built WebGIS Projects",
-      desc: "Developed mapping applications integrating geospatial data with modern frontend tools.",
-      icon: BsGlobeAsiaAustralia
-    },
-    {
-      title: "Full-Stack Development",
-      desc: "Expanded into backend using PHP, Laravel, and relational databases.",
-      icon: BsGear
-    },
-    {
-      title: "Current Focus",
-      desc: "Building modern full-stack web apps with React, Tailwind, and scalable architecture.",
-      icon: BsRocketTakeoff
-    }
-  ];
+  const sectionText = {
+    EN: "Journey",
+    ID: "Perjalanan"
+  };
+
+  const journeyText = {
+    EN: [
+      {
+        title: "Started with GIS",
+        desc: "Studied Geographic Information Systems and spatial data analysis, building strong analytical foundations.",
+        icon: TbMapSearch
+      },
+      {
+        title: "Discovered Web Development",
+        desc: "Learned HTML, CSS, and JavaScript to create interactive spatial data visualizations.",
+        icon: FaComputer
+      },
+      {
+        title: "Built WebGIS Projects",
+        desc: "Developed mapping applications integrating geospatial data with modern frontend tools.",
+        icon: BsGlobeAsiaAustralia
+      },
+      {
+        title: "Full-Stack Development",
+        desc: "Expanded into backend using PHP, Laravel, and relational databases.",
+        icon: BsGear
+      },
+      {
+        title: "Current Focus",
+        desc: "Building modern full-stack web apps with React, Tailwind, and scalable architecture.",
+        icon: BsRocketTakeoff
+      }
+    ],
+
+    ID: [
+      {
+        title: "Awal dengan GIS",
+        desc: "Mempelajari Sistem Informasi Geografis dan analisis data spasial sebagai fondasi analitis yang kuat.",
+        icon: TbMapSearch
+      },
+      {
+        title: "Mengenal Web Development",
+        desc: "Belajar HTML, CSS, dan JavaScript untuk membuat visualisasi data spasial yang interaktif.",
+        icon: FaComputer
+      },
+      {
+        title: "Membangun Project WebGIS",
+        desc: "Mengembangkan aplikasi peta dengan integrasi data geospasial dan teknologi frontend modern.",
+        icon: BsGlobeAsiaAustralia
+      },
+      {
+        title: "Full-Stack Development",
+        desc: "Mengembangkan backend menggunakan PHP, Laravel, dan database relasional.",
+        icon: BsGear
+      },
+      {
+        title: "Fokus Saat Ini",
+        desc: "Membangun aplikasi web full-stack modern dengan React, Tailwind, dan arsitektur scalable.",
+        icon: BsRocketTakeoff
+      }
+    ]
+  };
+
+  const journeys = journeyText[language];
 
   return (
     <section ref={sectionRef} id="journey" className="py-20 px-6">
@@ -63,7 +104,7 @@ export default function Journey() {
         bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 
         text-transparent bg-clip-text 
         drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">
-          Journey
+          {sectionText[language]}
         </h2>
 
         <div className="relative">

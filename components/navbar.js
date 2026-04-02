@@ -2,10 +2,11 @@
 
 "use client";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Navbar = () => {
+  const { language, toggleLanguage } = useLanguage(); 
   const [darkMode, setDarkMode] = useState(false);
-  const [language, setLanguage] = useState("EN");
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -26,9 +27,26 @@ const Navbar = () => {
     setDarkMode(!darkMode);
   };
 
-  const toggleLanguage = () => {
-    setLanguage(language === "EN" ? "ID" : "EN");
+  const translations = {
+    EN: {
+      home: "HOME",
+      about: "ABOUT",
+      project: "PROJECT",
+      tech: "TECH",
+      journey: "JOURNEY",
+      contact: "CONTACT",
+    },
+    ID: {
+      home: "BERANDA",
+      about: "TENTANG",
+      project: "PROYEK",
+      tech: "TEKNOLOGI",
+      journey: "PERJALANAN",
+      contact: "KONTAK",
+    }
   };
+
+  const t = translations[language];
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl shadow-md z-50 rounded-full backdrop-blur-md border border-gray-200 dark:border-gray-700" >
@@ -49,12 +67,12 @@ const Navbar = () => {
 
         {/* Menu */}
         <ul className="hidden md:flex gap-4 text-gray-700 dark:text-gray-300 font-thin text-sm">
-          <li><a href="#hero" className="hover:text-blue-500">HOME</a></li>
-          <li><a href="#about" className="hover:text-blue-500">ABOUT</a></li>
-          <li><a href="#project" className="hover:text-blue-500">PROJECT</a></li>
-          <li><a href="#skill" className="hover:text-blue-500">SKILL</a></li>
-          <li><a href="#journey" className="hover:text-blue-500">JOURNEY</a></li>
-          <li><a href="#contact" className="hover:text-blue-500">CONTACT</a></li>
+          <li><a href="#hero" className="hover:text-blue-500">{t.home}</a></li>
+          <li><a href="#about" className="hover:text-blue-500">{t.about}</a></li>
+          <li><a href="#project" className="hover:text-blue-500">{t.project}</a></li>
+          <li><a href="#tech" className="hover:text-blue-500">{t.tech}</a></li>
+          <li><a href="#journey" className="hover:text-blue-500">{t.journey}</a></li>
+          <li><a href="#contact" className="hover:text-blue-500">{t.contact}</a></li>
         </ul>
 
         {/* Actions */}

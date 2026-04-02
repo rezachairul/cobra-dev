@@ -1,11 +1,35 @@
 // sections/hero.js
+"use client";
 
 // Import 
 import React from "react";
+import { useLanguage } from "@/context/LanguageContext";
 import { TextHoverEffect } from "../components/ui/text-hover-effect";
 
 // Export
 export default function Hero() {
+
+  const { language } = useLanguage();
+
+  const heroText = {
+    EN: {
+      title: "Hi, I'm Reza Chairul",
+      role: "Full-Stack & GIS Developer",
+      desc: "I build modern web applications and geospatial platforms that transform complex data into interactive digital solutions.",
+      projectBtn: "View My Projects",
+      contactBtn: "Contact Me",
+    },
+    ID: {
+      title: "Hai, saya Reza Chairul",
+      role: "Full-Stack & GIS Developer",
+      desc: "Saya membangun aplikasi web modern dan platform geospasial yang mengubah data kompleks menjadi solusi digital interaktif.",
+      projectBtn: "Lihat Proyek Saya",
+      contactBtn: "Hubungi Saya",
+    }
+  };
+
+  const t = heroText[language];
+
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
 
@@ -34,15 +58,14 @@ export default function Hero() {
       {/* Foreground Content */}
       <div className="relative z-10">
         <h1 className="text-5xl font-bold mb-4">
-          Hi, I'm Reza Chairul
+          {t.title}
         </h1>
         <h4 className="text-5xl font-bold mb-4">
-          Full-Stack & GIS Developer
+          {t.role}
         </h4>
 
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          I build modern web applications and geospatial platforms 
-          that transform complex data into interactive digital solutions.
+          {t.desc}
         </p>
 
         {/* CTA Buttons */}
@@ -62,7 +85,7 @@ export default function Hero() {
             hover:shadow-[0_0_25px_rgba(168,85,247,0.8)]
           "
           >
-            <a href="#project">View My Projects</a>
+            <a href="#project">{t.projectBtn}</a>
           </button>
 
           {/* Secondary Button */}
@@ -82,7 +105,7 @@ export default function Hero() {
             text-transparent bg-clip-text
           "
           >
-            <a href="#contact">Contact Me</a>
+            <a href="#contact">{t.contactBtn}</a>
           </button>
 
         </div>

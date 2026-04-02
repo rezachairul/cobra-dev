@@ -1,8 +1,10 @@
-// sections/skill.js
+// sections/tech.js
 
 "use client";
 // Import 
 import { useEffect, useRef, useState } from "react";
+
+import { useLanguage } from "@/context/LanguageContext";
 
 import {
   FaReact,
@@ -26,10 +28,12 @@ import {
 } from "react-icons/si";
 
 // Export
-export default function Skill() {
+export default function Tech() {
   const sectionRef = useRef(null);
   const [startAnimation, setStartAnimation] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
+
+  const { language } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,7 +50,12 @@ export default function Skill() {
     }
   }, []);
 
-  const skillGroups = [
+  const sectionText = {
+    EN: "Tech",
+    ID: "Kemampuan Teknologi"
+  };
+
+  const techGroups = [
     {
       title: "Frontend",
       items: [
@@ -85,17 +94,17 @@ export default function Skill() {
   ];
 
   return (
-    <section ref={sectionRef} id="skill" className="py-20 px-6">
+    <section ref={sectionRef} id="tech" className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
         
         {/* Title */}
         <h2 className="text-lg md:text-xl font-medium font-mono mb-8 tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">
-          Stack & Tools
+          {sectionText[language]}
         </h2>
 
         {/* Tabs */}
         <div className="flex flex-wrap gap-3 mb-10">
-          {skillGroups.map((group, index) => (
+          {techGroups.map((group, index) => (
             <button
               key={index}
               onClick={() => setActiveTab(index)}
@@ -121,12 +130,12 @@ export default function Skill() {
             className="animate-slide"
           >
             <div className="grid md:grid-cols-3 gap-5">
-              {skillGroups[activeTab].items.map((skill, index) => {
-                const Icon = skill.icon;
+              {techGroups[activeTab].items.map((tech, index) => {
+                const Icon = tech.icon;
                 return (
-                  <SkillCard
+                  <TechCard
                     key={index}
-                    skill={skill}
+                    tech={tech}
                     Icon={Icon}
                     startAnimation={startAnimation}
                   />
@@ -140,7 +149,7 @@ export default function Skill() {
     </section>
   );
 }
-function SkillCard({ skill, Icon, startAnimation }) {
+function TechCard({ tech, Icon, startAnimation }) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -150,7 +159,7 @@ function SkillCard({ skill, Icon, startAnimation }) {
     }
 
     let start = 0;
-    const end = skill.level;
+    const end = tech.level;
     const duration = 1200;
     const stepTime = Math.max(10, Math.floor(duration / end));
 
@@ -161,7 +170,7 @@ function SkillCard({ skill, Icon, startAnimation }) {
     }, stepTime);
 
     return () => clearInterval(timer);
-  }, [startAnimation, skill.level]);
+  }, [startAnimation, tech.level]);
 
   return (
     <div className="bg-[#0b0b18] border border-purple-500/20 
@@ -173,7 +182,7 @@ function SkillCard({ skill, Icon, startAnimation }) {
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2 text-gray-300">
           <Icon size={18} className="text-purple-400" />
-          {skill.name}
+          {tech.name}
         </div>
 
         <span className="text-purple-400 text-sm">

@@ -1,6 +1,7 @@
 // app/layout.js
 
 import { Geist, Geist_Mono } from "next/font/google";
+import { LanguageProvider } from "@/context/LanguageContext";
 import Loader from "../components/ui/loader";
 import "./globals.css";
 
@@ -30,9 +31,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Loader>
-          {children}
-        </Loader>
+        <LanguageProvider>
+          <Loader>
+            {children}
+          </Loader>
+        </LanguageProvider>
       </body>
     </html>
   );
