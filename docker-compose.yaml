@@ -15,7 +15,8 @@ services:
       - DATABASE_URL=${DATABASE_URL}
     depends_on:
       - db
-    command: sh -c "npm install && npx prisma generate && npm run dev"
+    # command: sh -c "npm install && npx prisma generate && npm run dev"
+    command: sh -c "npm install && npx prisma db push && npm run dev"
     restart: unless-stopped
 
   db:

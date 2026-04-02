@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "studio": "DATABASE_URL=\"mysql://root:password@localhost:3307/cobradev\" prisma studio"
   },
   "dependencies": {
     "@prisma/client": "^7.4.2",

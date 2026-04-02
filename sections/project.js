@@ -1,38 +1,11 @@
 // sections/project.js
 
 // Import 
-import { FocusCards } from "../components/ui/focus-cards";
+import { projects } from "../data/projects"
+import { FaGithub, FaGlobe } from "react-icons/fa";
 
 // Export
 export default function Project() {
-  const cards = [
-    {
-      title: "Forest Adventure",
-      description: "A thrilling journey through the heart of the wilderness.",
-      src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "Valley of life",
-      src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "Sala behta hi jayega",
-      src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "Camping is for pros",
-      src: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "The road not taken",
-      src: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "The First Rule",
-      src: "https://assets.aceternity.com/the-first-rule.png",
-    },
-    
-  ];
 
   return (
     <section id="project" className="py-20 px-6 mx-auto">
@@ -41,9 +14,88 @@ export default function Project() {
         <h2 className="text-lg md:text-xl font-medium font-mono mb-8 tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">
           Projects       
         </h2>
-        <div>
-          <FocusCards cards={cards} />
+        
+        {/* data */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className=" bg-[#0b0b18] border border-purple-500/20 rounded-xl overflow-hidden shadow-[0_0_15px_rgba(168,85,247,0.15)] hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] hover:-translate-y-1 transition-all duration-300 group "
+            >
+              {/* IMAGE */}
+              <img
+                src={project.src}
+                className="w-full h-40 object-cover opacity-90 group-hover:opacity-100 transition"
+              />
+
+              {/* CONTENT */}
+              <div className="p-4 flex flex-col gap-3">
+                
+                {/* TITLE + YEAR */}
+                <div className="flex justify-between items-start">
+                  <h3 className="text-white font-semibold leading-tight">
+                    {project.title}
+                  </h3>
+                  <span className="text-xs text-purple-400">
+                    {project.year}
+                  </span>
+                </div>
+
+                {/* EXCERPT */}
+                <p className="text-sm text-gray-300">
+                  {project.excerpt}
+                </p>
+
+                {/* MORE */}
+                <span className="text-sm text-purple-400 cursor-pointer hover:underline w-fit">
+                  more →
+                </span>
+
+                {/* BOTTOM SECTION */}
+                <div className="flex justify-between items-center mt-2">
+                  
+                  {/* TECH STACK */}
+                  <div className="flex gap-2">
+                    {project.technologies.map((tech, i) => {
+                      const Icon = tech.icon;
+                      return (
+                        <div key={i} className="relative group/tech">
+                          <Icon className="text-lg text-purple-300 hover:text-purple-400 transition" />
+
+                          {/* TOOLTIP */}
+                          <span
+                            className="
+                              absolute -top-7 left-1/2 -translate-x-1/2
+                              text-[10px] px-2 py-1 rounded
+                              bg-purple-600 text-white
+                              opacity-0 group-hover/tech:opacity-100
+                              transition pointer-events-none
+                              whitespace-nowrap
+                            "
+                          >
+                            {tech.name}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* LINKS */}
+                  <div className="flex gap-3 text-purple-400">
+                    <a href={project.githubUrl} target="_blank">
+                      <FaGithub className="text-lg hover:text-purple-300" />
+                    </a>
+                    <a href={project.siteUrl} target="_blank">
+                      <FaGlobe className="text-lg hover:text-purple-300" />
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          ))}
         </div>
+
       </div>      
     </section>
   );
