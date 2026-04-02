@@ -1,11 +1,13 @@
-// This file is a part of the Next.js application and serves as the main entry point for the home page.
+// app/page.js
+
 import { redirect } from "next/navigation";
 
-export const metadata = {
-  title: "Home | CobraDev",
-  description: "CobraDev - Portfolio of Reza Chairul, a GIS and Web Developer",
-};
+const isMaintenance = false; // Ganti ke true untuk mode maintenance
 
 export default function Home() {
-  redirect("/maintenance");
+  if (isMaintenance) {
+    redirect("/maintenance");
+  } else {
+    redirect("/home");
+  }
 }

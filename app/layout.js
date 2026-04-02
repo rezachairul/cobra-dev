@@ -1,8 +1,9 @@
 // app/layout.js
 
 import { Geist, Geist_Mono } from "next/font/google";
+import { LanguageProvider } from "@/context/LanguageContext";
+import Loader from "../components/ui/loader";
 import "./globals.css";
-import { headers } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,31 +15,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// 🔥 Judul berdasarkan pathname
-export async function generateMetadata() {
-  const headersList = await headers(); // ⬅️ pakai await!
-  const pathname = headersList.get("x-next-url"); // dapetin path-nya
-
-  const routeTitleMap = {
-    "/": "Home | CobraDev",
-    "/resume": "My Resume | CobraDev",
-    "/dashboard": "Dashboard | CobraDev",
-  };
-
-  return {
-    title: routeTitleMap[pathname] || "CobraDev",
-    description: "CobraDev - Portfolio of a GIS and Web Developer",
-    icons: {
-      icon: "./favicon.svg",
-    },
-  };
-}
+// Metadata Global (lebih proper & SEO friendly)
+export const metadata = {
+  title: {
+    default: "CobraDev",
+    template: "%s | CobraDev",
+  },
+  description: "CobraDev - Portfolio of Reza Chairul as a Fullstack & GIS Developer",
+  icons: {
+    icon: "/favicon.svg", // pakai / bukan ./
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+        <LanguageProvider>
+          <Loader>
+            {children}
+          </Loader>
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -96,14 +96,14 @@ export default function MaintenancePage() {
         <p className="mt-6 text-lg text-gray-300 leading-relaxed">
           Rebuilding infrastructure. Optimizing performance.
           Deploying next-generation architecture.
+          Stay tuned for a faster, more reliable experience. We’re working hard to bring you an improved service. Thank you for your patience and support!
+          <br />
+          <span className="text-lg md:text-xl font-extrabold tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">CobraDev Team</span>
         </p>
 
         <div className="mt-10 grid grid-cols-4 gap-4">
           {Object.entries(timeLeft).map(([label, value]) => (
-            <div
-              key={label}
-              className="bg-white/5 border border-purple-500/20 backdrop-blur-lg rounded-xl py-4 shadow-[0_0_20px_rgba(168,85,247,0.3)]"
-            >
+            <div key={label} className="bg-white/5 border border-purple-500/20 backdrop-blur-lg rounded-xl py-4 shadow-[0_0_20px_rgba(168,85,247,0.3)]" >
               <div className="text-3xl font-bold text-purple-400">
                 {value}
               </div>

@@ -1,0 +1,35 @@
+# docker-compose.yaml
+
+services:
+  app:
+    container_name: cobradev-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    working_dir: /app
+    ports:
+      - "${APP_PORT}:3000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      - db
+    # command: sh -c "npm install && npx prisma generate && npm run dev"
+    command: sh -c "npm install && npx prisma db push && npm run dev"
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    container_name: cobradev-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - cobradev-dbdata:/var/lib/mysql
+
+volumes:
+  cobradev-dbdata:
