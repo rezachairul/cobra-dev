@@ -1,18 +1,27 @@
 // sections/project.js
 
+"use client";
 // Import 
+import { useEffect, useRef, useState } from "react";
+
+import { useLanguage } from "@/context/LanguageContext";
 import { projects } from "../data/projects"
 import { FaGithub, FaGlobe } from "react-icons/fa";
 
 // Export
 export default function Project() {
+  const { language } = useLanguage();
+  const sectionText = {
+    EN: "Projects",
+    ID: "Proyek"
+  };  
 
   return (
     <section id="project" className="py-20 px-6 mx-auto">
       <div className="max-w-5xl mx-auto">
         {/* Title */}
         <h2 className="text-lg md:text-xl font-medium font-mono mb-8 tracking-widest bg-gradient-to-r from-purple-400 via-fuchsia-500 to-purple-700 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]">
-          Projects       
+          {sectionText[language]}       
         </h2>
         
         {/* data */}
@@ -34,7 +43,7 @@ export default function Project() {
                 {/* TITLE + YEAR */}
                 <div className="flex justify-between items-start">
                   <h3 className="text-white font-semibold leading-tight">
-                    {project.title}
+                    {project.title[language]}
                   </h3>
                   <span className="text-xs text-purple-400">
                     {project.year}
@@ -43,7 +52,7 @@ export default function Project() {
 
                 {/* EXCERPT */}
                 <p className="text-sm text-gray-300">
-                  {project.excerpt}
+                  {project.excerpt[language]}
                 </p>
 
                 {/* MORE */}
