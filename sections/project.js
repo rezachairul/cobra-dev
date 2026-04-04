@@ -29,7 +29,7 @@ export default function Project() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className=" bg-[#0b0b18] border border-purple-500/20 rounded-xl overflow-hidden shadow-[0_0_15px_rgba(168,85,247,0.15)] hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] hover:-translate-y-1 transition-all duration-300 group "
+              className=" bg-white dark:bg-[#0b0b18] border border border-gray-200 dark:border-purple-500/20 rounded-xl overflow-hidden shadow-[0_0_15px_rgba(168,85,247,0.15)] hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] hover:-translate-y-1 transition-all duration-300 group "
             >
               {/* IMAGE */}
               <img
@@ -45,18 +45,18 @@ export default function Project() {
                   <h3 className="text-white font-semibold leading-tight">
                     {project.title[language]}
                   </h3>
-                  <span className="text-xs text-purple-400">
+                  <span className="text-xs text-purple-800 dark:text-purple-400">
                     {project.year}
                   </span>
                 </div>
 
                 {/* EXCERPT */}
-                <p className="text-sm text-gray-300">
+                <p className="text-sm text-gray-800 dark:text-gray-300">
                   {project.excerpt[language]}
                 </p>
 
                 {/* MORE */}
-                <span className="text-sm text-purple-400 cursor-pointer hover:underline w-fit">
+                <span className="text-sm text-purple-800 dark:text-purple-400 cursor-pointer hover:underline w-fit">
                   more →
                 </span>
 
@@ -69,7 +69,7 @@ export default function Project() {
                       const Icon = tech.icon;
                       return (
                         <div key={i} className="relative group/tech">
-                          <Icon className="text-lg text-purple-300 hover:text-purple-400 transition" />
+                          <Icon className="text-lg text-purple-400 dark:text-purple-400 hover:text-purple-800 dark:text-purple-400 transition" />
 
                           {/* TOOLTIP */}
                           <span
@@ -90,12 +90,12 @@ export default function Project() {
                   </div>
 
                   {/* LINKS */}
-                  <div className="flex gap-3 text-purple-400">
+                  <div className="flex gap-3 text-purple-400 dark:text-purple-400">
                     <a href={project.githubUrl} target="_blank">
-                      <FaGithub className="text-lg hover:text-purple-300" />
+                      <FaGithub className="text-lg hover:text-purple-800 dark:text-purple-400" />
                     </a>
                     <a href={project.siteUrl} target="_blank">
-                      <FaGlobe className="text-lg hover:text-purple-300" />
+                      <FaGlobe className="text-lg hover:text-purple-800 dark:text-purple-400" />
                     </a>
                   </div>
                 </div>
