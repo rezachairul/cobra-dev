@@ -144,23 +144,43 @@ const Navbar = () => {
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 120 }}
               className="
-                fixed top-0 right-0 h-full w-[75%] max-w-sm
+                fixed top-0 right-0 h-full
+                w-[75%]
                 md:hidden
-                bg-white/10 dark:bg-black/30
+                bg-white/30 dark:bg-black/30
                 border-l border-gray-200 dark:border-gray-700
                 z-50 p-6
                 shadow-[0_0_30px_rgba(168,85,247,0.3)]
-              "
+                backdrop-blur-xl
+                "
             >
               {/* Close */}
-              <div className="flex items-center justify-end h-[40px] mb-6">
-                <button onClick={() => setMenuOpen(false)} className="p-2 rounded-lg hover:bg-gray-200/20 transition">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
-                </button>
-              </div>
+                <motion.button
+                  onClick={() => setMenuOpen(false)}
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  whileHover={{ rotate: 90, scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  className="
+                    absolute
+                    -left-5
+                    top-1/2
+                    -translate-y-1/2
+                    w-10 h-10
+                    rounded-full
+                    backdrop-blur-md
+                    bg-white/20 dark:bg-black/40
+                    border border-purple-500/40
+                    flex items-center justify-center
+                    shadow-[0_0_15px_rgba(168,85,247,0.6)]
+                  "
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+                </motion.button>
 
               {/* Menu */}
-              <ul className="flex flex-col gap-6 text-lg text-gray-700 dark:text-gray-300">
+              <ul className="flex flex-col gap-6 text-lg text-gray-100 dark:text-gray-300">
                 <li><a href="#hero" className="hover:text-purple-500" onClick={() => setMenuOpen(false)}>{t.home}</a></li>
                 <li><a href="#about" className="hover:text-purple-500" onClick={() => setMenuOpen(false)}>{t.about}</a></li>
                 <li><a href="#project" className="hover:text-purple-500" onClick={() => setMenuOpen(false)}>{t.project}</a></li>
