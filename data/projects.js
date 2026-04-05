@@ -55,32 +55,32 @@ export const projects = [
       { name: "Docker", icon: FaDocker }
     ]
   },
-  {
-    id: 2,
-    title: {
-      EN: "Xaviala",
-      ID: "Xaviala"
-    },
-    slug: "xaviala",
-    year: 2026,
-    src:"/assets/img/dummy.jpg",
-    excerpt: {
-      EN: "Platform Xaviala...",
-      ID: "Platform Xaviala..."
-    },
-    description: {
-      EN: "Full explanation of Xaviala...",
-      ID: "Penjelasan lengkap Xaviala..."
-    },
-    githubUrl: "#",
-    siteUrl: "#",
-    technologies: [
-      { name: "Next.js", icon: RiNextjsLine },
-      { name: "Tailwind", icon: SiTailwindcss },
-      { name: "Prisma", icon: SiPrisma },
-      { name: "Docker", icon: FaDocker }
-    ]
-  },
+  // {
+  //   id: 2,
+  //   title: {
+  //     EN: "Xaviala",
+  //     ID: "Xaviala"
+  //   },
+  //   slug: "xaviala",
+  //   year: 2026,
+  //   src:"/assets/img/dummy.jpg",
+  //   excerpt: {
+  //     EN: "Platform Xaviala...",
+  //     ID: "Platform Xaviala..."
+  //   },
+  //   description: {
+  //     EN: "Full explanation of Xaviala...",
+  //     ID: "Penjelasan lengkap Xaviala..."
+  //   },
+  //   githubUrl: "#",
+  //   siteUrl: "#",
+  //   technologies: [
+  //     { name: "Next.js", icon: RiNextjsLine },
+  //     { name: "Tailwind", icon: SiTailwindcss },
+  //     { name: "Prisma", icon: SiPrisma },
+  //     { name: "Docker", icon: FaDocker }
+  //   ]
+  // },
   {
     id: 3,
     title: {
