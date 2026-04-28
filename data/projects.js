@@ -22,7 +22,9 @@ import {
   SiPostgresql,
   SiSqlite,
   SiLatex,
-  SiPrisma
+  SiPrisma,
+  SiQgis,
+  SiLeaflet
 } from "react-icons/si";
 
 import { RiNextjsLine } from "react-icons/ri";
@@ -109,25 +111,27 @@ export const projects = [
   {
     id: 4,
     title: {
-      EN: "PLN NP UPDK Bandar Lampung System",
-      ID: "Sistem PLN NP UPDK Bandar Lampung"
+      EN: "LocatorGIS Platform",
+      ID: "Platform LocatorGIS"
     },
-    slug: "pln-np-updk-bandar-lampung",
+    slug: "locatorgis",
     year: 2025,
-    src:"/assets/img/project/P_2025_PLN.jpg",
+    src:"/assets/img/project/P_2025_locatorgis.png",
     excerpt: {
-      EN: "Inventory management system for PLN NP UPDK Bandar Lampung...",
-      ID: "Sistem manajemen inventaris PLN NP UPDK Bandar Lampung..."
+      EN: "Web-based GIS platform for spatial data visualization...",
+      ID: "Platform WebGIS untuk visualisasi data spasial..."
     },
     description: {
-      EN: "Full explanation of PLN NP UPDK Bandar Lampung system...",
-      ID: "Penjelasan lengkap sistem PLN NP UPDK Bandar Lampung..."
+      EN: "Full explanation of LocatorGIS platform...",
+      ID: "Penjelasan lengkap platform LocatorGIS..."
     },
     githubUrl: "#",
     siteUrl: "#",
     technologies: [
       { name: "Laravel", icon: FaLaravel },
-      { name: "Tailwind", icon: SiTailwindcss }
+      { name: "Tailwind", icon: SiTailwindcss },
+      { name: "QGis", icon: SiQgis },
+      { name: "Leaflet JS", icon: SiLeaflet }
     ]
   },
   {
@@ -155,21 +159,21 @@ export const projects = [
     ]
   },
   {
-    id: 6,
+    id: 6,    
     title: {
-      EN: "LocatorGIS Platform",
-      ID: "Platform LocatorGIS"
+      EN: "PLN NP UPDK Bandar Lampung System",
+      ID: "Sistem PLN NP UPDK Bandar Lampung"
     },
-    slug: "locatorgis",
+    slug: "pln-np-updk-bandar-lampung",
     year: 2025,
-    src:"/assets/img/project/P_2025_locatorgis.png",
+    src:"/assets/img/project/P_2025_PLN.jpg",
     excerpt: {
-      EN: "Web-based GIS platform for spatial data visualization...",
-      ID: "Platform WebGIS untuk visualisasi data spasial..."
+      EN: "Inventory management system for PLN NP UPDK Bandar Lampung...",
+      ID: "Sistem manajemen inventaris PLN NP UPDK Bandar Lampung..."
     },
     description: {
-      EN: "Full explanation of LocatorGIS platform...",
-      ID: "Penjelasan lengkap platform LocatorGIS..."
+      EN: "Full explanation of PLN NP UPDK Bandar Lampung system...",
+      ID: "Penjelasan lengkap sistem PLN NP UPDK Bandar Lampung..."
     },
     githubUrl: "#",
     siteUrl: "#",
