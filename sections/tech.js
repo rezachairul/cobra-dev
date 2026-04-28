@@ -15,7 +15,7 @@ import {
   FaPhp,
   FaLaravel,
   FaGitAlt,
-  FaDocker
+  FaDocker,
 } from "react-icons/fa";
 
 import {
@@ -24,7 +24,10 @@ import {
   SiMysql,
   SiPostgresql,
   SiSqlite,
-  SiLatex
+  SiLatex,
+  SiFlutter,
+  SiQgis,
+  SiLeaflet,
 } from "react-icons/si";
 
 // Export
@@ -73,6 +76,19 @@ export default function Tech() {
       items: [
         { name: "PHP", level: 90, icon: FaPhp },
         { name: "Laravel", level: 92, icon: FaLaravel },
+      ]
+    },
+    {
+      title: "Mobile",
+      items: [
+        { name: "Flutter", level: 50, icon: SiFlutter },
+      ]
+    },
+    {
+      title: "GIS",
+      items: [
+        { name: "QGis", level: 50, icon: SiQgis },
+        { name: "Leaflet JS", level: 50, icon: SiLeaflet },
       ]
     },
     {
