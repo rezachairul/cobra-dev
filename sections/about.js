@@ -68,7 +68,7 @@ export default function About() {
                 w-64
                 rounded-xl
                 border border-purple-500/40
-                bg-white dark:bg-[#0f0f11]
+                bg-[var(--card-bg)]
                 p-3
                 transition-all duration-300
                 hover:shadow-[0_0_25px_rgba(168,85,247,0.6)]
@@ -90,11 +90,11 @@ export default function About() {
 
                 {/* Info */}
                 <div className="mt-3 text-center font-mono">
-                  <p className="text-sm text-dark dark:text-white font-semibold">
+                  <p className="text-sm font-semibold">
                     Reza Chairul
                   </p>
 
-                  <p className="text-xs text-purple-800 dark:text-purple-400">
+                  <p className="text-xs text-purple-800 dark:text-purple-700">
                     Full-Stack Developer
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export default function About() {
 
           {/* Description */}
           <div className="max-w-3xl">
-            <p className="text-gray-800 dark:text-gray-300 font-normal text-base text-justify leading-relaxed mb-4">
+            <p className="font-normal text-base text-justify leading-relaxed mb-4">
               {t.desc}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
@@ -117,17 +117,17 @@ export default function About() {
                 <div
                   key={i}
                   className="
-                    bg-white dark:bg-[#0b0b18] dark:bg-[#0b0b18] border border-purple-500/20 rounded-lg p-4
+                    bg-[var(--card-bg)] border border-purple-500/20 rounded-lg p-4
                     shadow-[0_0_15px_rgba(168,85,247,0.15)]
                     hover:shadow-[0_0_20px_rgba(168,85,247,0.35)]
                     transition-all duration-300
                     hover:-translate-y-1
                   "
                 >
-                  <p className="text-xs text-gray-800 dark:text-gray-400 font-mono tracking-widest">
+                  <p className="font-mono tracking-widest">
                     {item.label}
                   </p>
-                  <p className="text-purple-800 dark:text-purple-400 font-semibold mt-1">
+                  <p className="text-purple-800 dark:text-purple-600 font-semibold mt-1">
                     {item.value}
                   </p>
                 </div>

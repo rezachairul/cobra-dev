@@ -129,7 +129,7 @@ export default function Journey() {
                   <div
                     className={`
                     w-full md:w-[45%]
-                    bg-white dark:bg-[#0b0b18]
+                    bbg-[var(--card-bg)]
                     border border-gray-200 dark:border-purple-500/20
                     rounded-xl p-5
                     shadow-[0_0_20px_rgba(168,85,247,0.15)]
@@ -137,20 +137,20 @@ export default function Journey() {
                     transition-all duration-500
                     ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
                     `}
-                    style={{ transitionDelay: `${index * 150}ms` }}
+                    style={{ transitionDelay: `${index * 10}ms` }}
                   >
                     <div className="flex items-start gap-3">
 
-                      <div className="text-2xl text-purple-800 dark:text-purple-300
+                      <div className="text-2xl text-purple-800 dark:text-purple-800
                       drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]">
                         <Icon />
                       </div>
 
                       <div>
-                        <h3 className="text-purple-800 dark:text-purple-300 font-mono mb-1">
+                        <h3 className="text-purple-200 dark:text-purple-800 font-mono mb-1">
                           {item.title}
                         </h3>
-                        <p className="text-gray-800 dark:text-gray-400 text-sm">
+                        <p className="text-sm">
                           {item.desc}
                         </p>
                       </div>

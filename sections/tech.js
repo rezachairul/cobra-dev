@@ -129,8 +129,8 @@ export default function Tech() {
                 border transition-all duration-300
                 ${
                   activeTab === index
-                    ? "bg-purple-100 dark:bg-purple-600/20 border-purple-500 text-purple-700 dark:text-purple-300 shadow-[0_0_12px_rgba(168,85,247,0.35)] dark:shadow-[0_0_15px_rgba(168,85,247,0.5)]"
-                    : "border-gray-300 dark:border-purple-500/20 text-gray-700 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-300"
+                    ? "bg-purple-100 dark:bg-purple-600/20 border-purple-500 text-purple-700 dark:text-purple-800 shadow-[0_0_12px_rgba(168,85,247,0.35)] dark:shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+                    : "border-gray-300 dark:border-purple-500/20 hover:text-purple-600 dark:hover:text-purple-800"
                 }
               `}
             >
@@ -190,7 +190,7 @@ function TechCard({ tech, Icon, startAnimation }) {
 
   return (
     <div className="
-    bg-white dark:bg-[#0b0b18]
+    bg-[var(--card-bg)]
     border border-gray-200 dark:border-purple-500/20
     rounded-xl p-5 
     shadow-[0_0_20px_rgba(168,85,247,0.15)]
@@ -198,12 +198,12 @@ function TechCard({ tech, Icon, startAnimation }) {
     transition-all duration-300">
       
       <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-2 text-gray-800 dark:text-gray-300">
-          <Icon size={18} className="text-purple-800 dark:text-purple-300" />
+        <div className="flex items-center gap-2">
+          <Icon size={18} className="text-purple-800 dark:text-purple-800" />
           {tech.name}
         </div>
 
-        <span className="text-purple-800 dark:text-purple-300 text-sm">
+        <span className="text-purple-800 dark:text-purple-800 text-sm">
           {progress}%
         </span>
       </div>

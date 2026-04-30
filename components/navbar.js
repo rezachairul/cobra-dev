@@ -11,22 +11,25 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-      setDarkMode(true);
-    }
-  }, []);
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    setDarkMode(savedTheme === "dark");
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.classList.toggle("dark", prefersDark);
+    setDarkMode(prefersDark);
+  }
+}, []);
 
   const toggleTheme = () => {
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
-    setDarkMode(!darkMode);
+    setDarkMode(prev => {
+      const newMode = !prev;
+      document.documentElement.classList.toggle("dark", newMode);
+      localStorage.setItem("theme", newMode ? "dark" : "light");
+      return newMode;
+    });
   };
 
   const translations = {
@@ -68,13 +71,13 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex gap-4 text-gray-800 dark:text-gray-300 font-thin text-sm">
-            <li><a href="#hero" className="hover:text-purple-800 dark:hover:text-purple-500">{t.home}</a></li>
-            <li><a href="#about" className="hover:text-purple-800 dark:hover:text-purple-500">{t.about}</a></li>
-            <li><a href="#project" className="hover:text-purple-800 dark:hover:text-purple-500">{t.project}</a></li>
-            <li><a href="#tech" className="hover:text-purple-800 dark:hover:text-purple-500">{t.tech}</a></li>
-            <li><a href="#journey" className="hover:text-purple-800 dark:hover:text-purple-500">{t.journey}</a></li>
-            <li><a href="#contact" className="hover:text-purple-800 dark:hover:text-purple-500">{t.contact}</a></li>
+          <ul className="hidden md:flex gap-4 text-gray-800 dark:text-gray-500 font-thin text-sm">
+            <li><a href="#hero" className="hover:text-purple-800 dark:hover:text-purple-700">{t.home}</a></li>
+            <li><a href="#about" className="hover:text-purple-800 dark:hover:text-purple-700">{t.about}</a></li>
+            <li><a href="#project" className="hover:text-purple-800 dark:hover:text-purple-700">{t.project}</a></li>
+            <li><a href="#tech" className="hover:text-purple-800 dark:hover:text-purple-700">{t.tech}</a></li>
+            <li><a href="#journey" className="hover:text-purple-800 dark:hover:text-purple-700">{t.journey}</a></li>
+            <li><a href="#contact" className="hover:text-purple-800 dark:hover:text-purple-700">{t.contact}</a></li>
           </ul>
 
           {/* Actions */}
@@ -109,7 +112,7 @@ const Navbar = () => {
                   viewBox="0 0 24 24" fill="none" 
                   stroke="currentColor" 
                   strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" 
-                  className ="icon icon-tabler icons-tabler-outline icon-tabler-moon text-gray-800 dark:text-gray-300">
+                  className ="icon icon-tabler icons-tabler-outline icon-tabler-moon text-gray-800 dark:text-gray-800 hover:text-gray-600 dark:hover:text-gray-300 transition">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" />
                 </svg>
               )}
